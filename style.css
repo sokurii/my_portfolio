@@ -1,0 +1,552 @@
+/* *{
+    font-family: 'Noto Sans KR', sans-serif;
+
+    [참고] list-style:none; 
+    <ul>이나, <ol>의 하위에 속한 <li>에 기호나, 숫자를 표시 X    
+    list-style:none;  
+} */
+
+/* 큰 글자 부분은 굵게 */
+h1,h2,h3,header{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    list-style:none; 
+}
+/* 본문은 일반 굵기 */
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    list-style:none; 
+}
+/* 영문폰트 */
+.en{
+    font-family: 'Montserrat', sans-serif;
+    list-style:none;  
+}
+
+ul{
+    padding-left:0px;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* body{
+    color: rgb(83, 83, 82);
+} */
+
+#not-provided{
+    /* 공간은 남아 있는 상태로 숨김  */
+    /* visibility: hidden; */
+
+    /* 공간 남기지 않고 숨김  */
+    display:none
+}
+
+/* 화면사이즈 575px일때 보이지 않는다는 문구 처리 */
+@media (max-width:575px){
+    header,
+    main,
+    article,
+    footer{
+        /* !important : css 우선순위에 따라
+        !important>html style>id>class */
+        display: none !important;
+    }
+    #not-provided{
+        display: block;
+    }
+}
+
+
+/* header */
+header>nav>.icon-container,
+#my-intro,
+#skills>ul,
+#project > .edu-project-container,
+#contact > .contact-container{
+    margin-left: 12rem;
+}
+
+header>nav>.navbar-bar,
+#my-intro
+#skills>ul,
+#project > .edu-project-container,
+#contact > .contact-container{
+    margin-right: 12rem;
+}
+
+header > nav {
+    background-color: white;
+}
+header .icon-container span{
+    font-size: 2rem;
+}
+header ul{
+    font-size:1.4rem;
+}
+
+
+
+/* 화면사이즈 992px일때 */
+@media (max-width:992px) {
+    header>nav>.icon-container,
+    #my-intro,
+    #skills>ul,
+    #project > .edu-project-container,
+    #contact > .contact-container{
+        margin-left: 6rem;
+    }
+
+    header>nav>.icon-container,
+    #my-intro,
+    #skills>ul,
+    #project > .edu-project-container,
+    #contact > .contact-container{
+        margin-right: 6rem;
+    }
+    
+}
+
+
+#front-page,
+#my-intro,
+#skiils,
+#project,
+#contact{
+    padding-top:5rem;
+}
+
+#frontpage>.title-container>h1,h2,
+#my-intro .info-text-contatiner>.top-text,
+#my-intro .info-text-container .icon-container,
+#my-intro .my-interests-container
+#skills.card-header,
+#project h2,
+#project h3,
+#contact h2,
+#contact .contact-info-container .kategorie-name{
+    color: rgb(83, 83, 82);
+}
+
+#frontpage>.title-container>h3{
+    margin-top: 20px;
+    color: rgb(194, 183, 168);
+}
+
+#skills,
+#contact{
+    background-color: rgb(194, 183, 168);
+    
+}
+
+#frontpage>.title-container>a>.btn
+{
+    background-color: rgb(95, 86, 70);
+    color: honeydew;
+    
+}
+
+#frontpage > .title-container > ul
+ {
+    color: rgb(116,116,116,0.6)
+}
+
+#header .icon-container span{
+    font-size: 3rem;
+}
+
+/* frontpage = main */
+#frontpage{
+    display: flex;
+    height: 100vh;
+}
+
+#frontpage>.title-container{
+    flex: 1;
+}
+
+.frontpage-img-container{
+    flex: 3;
+    background-image:linear-gradient(to left,transparent,white),url(img/cat_gamzzok.jpg);
+    background-size: cover;
+
+}
+
+
+
+
+#frontpage > nav{
+    width: 100px;
+}
+
+#frontpage>nav>ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+
+}
+
+#frontpage>nav li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#frontpage>.title-container{
+    padding-left:5rem;
+    padding-top: 10rem;
+    padding-right: 5rem;
+}
+
+#frontpage>.title-container>h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#frontpage>.title-container button{
+    margin-right: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+
+/* 992 사이즈일때 */
+@media(max-width:992px){
+
+    #frontpage > nav li{
+        display:none;
+    }
+    #frontpage > .title-container{
+        padding-left: 1rem;
+        padding-right: 8rem;
+    }
+    
+    #frontpage h2{
+        font-size:1.8rem
+    }
+    
+    #frontpage h3{
+        font-size:1.5rem
+    }
+
+    #frontpage ul{
+        font-size:0.8;
+    }
+}
+/* 1200일때 */
+@media(max-width:1200px){
+    .frontpage-img-container{
+        display:none;
+    }
+}
+
+
+/* my-intro */
+
+#my-intro>h2{
+    display: flex;
+    align-items: center;
+    color: rgb(95, 86, 70)
+}
+
+#my-intro>.my-intro-layout-parent{
+    display: flex;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 992px) {
+	#my-intro > .my-intro-layout-parent {
+		flex-direction: column;
+	}
+}
+
+#my-intro.profile-img-container{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-intro .info-text-container {
+	flex: 2;
+	padding-left: 50px;
+}
+
+#my-intro .profile-img {
+    height: 36rem;
+    width: 23rem;
+    background-image: url(img/cat.JPG);
+    background-size: cover;
+}
+
+#my-intro .info-text-container > .top-text {
+	margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+	#my-intro .info-text-container > .top-text {
+		margin-top: 80px;
+	}
+}
+#my-intro .info-text-container > h1 {
+	margin-bottom: 20px;
+}
+#my-intro .info-text-container > p {
+	margin-bottom: 30px;
+}
+#my-intro .info-text-container > .contact-info-ul {
+	height: 200px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+}
+#my-intro .contact-info-ul .row {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#my-intro .contact-info-ul .icon-container {
+	flex: 1;
+}
+#my-intro .contact-info-ul .column-name {
+	flex: 4;
+}
+#my-intro .contact-info-ul .column-data {
+	flex: 5;
+}
+#my-intro .my-interests-container > h2 {
+	margin-bottom: 20px;
+}
+#my-intro .my-interests-container > ul {
+	display: flex;
+}
+#my-intro .my-interests-container li {
+	margin-right: 4rem;
+	display: flex;
+	width: 2rem;
+	justify-content: space-between;
+}
+
+
+/* #skills */
+#skills > h2 {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+	color: rgb(95, 86, 70)
+
+}
+#skills > ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#skills .card {
+	width: 20rem;
+	box-shadow: 1rem 1rem 1rem rgb(111, 111, 111);
+	margin-bottom: 100px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+#skills .card-header {
+	font-size: 1.5rem;
+}
+#skills .card-body img {
+	height: 4rem;
+	margin-top: 10px;
+}
+
+
+
+/* #project */
+#project > h2 {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+#project > .edu-project-container {
+	display: flex;
+}
+#project .edu-container {
+	flex: 2;
+}
+#project .project-container {
+	flex: 1;
+}
+@media (max-width: 992px) {
+	#project > .edu-project-container {
+		flex-direction: column;
+	}
+}
+#project > .edu-project-container h2 {
+	display: flex;
+	align-items: center;
+}
+#project > .edu-project-container h2 > .icon {
+	font-size: 3rem;
+	margin-right: 20px;
+}
+#project h2,
+#project li {
+	margin-bottom: 30px;
+}
+#project li {
+	border-left: 5px solid rgb(83, 83, 82);
+	padding-left: 30px;
+}
+#project .date {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+#project .date-data {
+	margin-left: 20px;
+}
+@media (max-width: 1200px) {
+	#project h3 {
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 992px) {
+	#project h3 {
+		font-size: 1rem;
+	}
+	#project .role {
+		font-size: 0.8rem;
+	}
+	#project .date-data {
+		font-size: 0.8rem;
+	}
+}
+
+/* #contact */
+#contact {
+	margin-bottom: 100px;
+}
+#contact > h2,
+#contact > h3 {
+	text-align: center;
+}
+#contact > h2 {
+	font-size: 2rem;
+}
+#contact > h3 {
+	font-size: 3rem;
+	margin-bottom: 80px;
+}
+#contact > .contact-container {
+	display: flex;
+}
+#contact .input-container {
+	flex: 2;
+}
+#contact .name-email-container,
+#contact .title-container,
+#contact .content-container {
+	margin-bottom: 40px;
+}
+#contact .name-email-container {
+	display: flex;
+	justify-content: space-between;
+}
+#contact .name-email-container > .name-container,
+#contact .name-email-container > .email-container {
+	flex: 1;
+}
+#contact .name-email-container > .name-container {
+	margin-right: 20px;
+}
+#contact .name-email-container > .email-container {
+	margin-left: 20px;
+}
+@media (max-width: 1200px) {
+	#contact .name-email-container {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	#contact .name-email-container > .name-container {
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	#contact .name-email-container > .email-container {
+		margin-left: 0px;
+	}
+}
+#contact .contact-info-container {
+	flex: 1;
+}
+#contact-input-content {
+	height: 300px;
+}
+#contact .input-container button {
+	margin-right: 20px;
+	border-radius: 20px;
+	width: 300px;
+	height: 50px;
+	color: white;
+	width: 100%;
+}
+#contact .contact-info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+@media (max-width: 992px) {
+	#contact .contact-info-container {
+		display: none;
+	}
+}
+#contact .contact-info-container .phone-container,
+#contact .contact-info-container .email-container,
+#contact .contact-info-container .address-container {
+	display: flex;
+	align-items: center;
+	margin-left: 5rem;
+}
+#contact .contact-info-container .icon-container {
+	height: 50px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+#contact .contact-info-container .icon-container span {
+	font-size: 2rem;
+	color: white;
+}
+#contact .contact-info-container .kategorie {
+	margin-left: 30px;
+}
+#contact .contact-info-container .kategorie-name {
+	font-size: 1.5rem;
+}
+
+
+
+/* footer */
+footer{
+    height: 100px;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:2rem;
+
+}
+@media(max: width 768px){
+    footer{
+        font-size: 1rem;
+    }
+}
+
+
+
+
